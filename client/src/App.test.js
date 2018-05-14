@@ -4,7 +4,7 @@ import { shallow } from 'enzyme'
 import configureStore from 'redux-mock-store'
 import ReactDOM from 'react-dom'
 
-const initialState = {columns: [], data: []}
+const initialState = {}
 const mockStore = configureStore()
 let store,app
 

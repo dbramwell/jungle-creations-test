@@ -17,7 +17,7 @@ class DataTable extends Component {
           </tr>
         </tbody>
       </table>
-    );
+    )
   }
 }
 
