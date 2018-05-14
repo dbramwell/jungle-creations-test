@@ -15,6 +15,10 @@ class DataTable extends Component {
             <th>Current Status:</th>
             <td>{this.props.builds.builds[0].state}</td>
           </tr>
+          <tr>
+            <th>Triggered By:</th>
+            <td>{this.props.builds.builds[0].event_type}</td>
+          </tr>
         </tbody>
       </table>
     )
