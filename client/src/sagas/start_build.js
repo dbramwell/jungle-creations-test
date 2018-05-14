@@ -5,8 +5,7 @@ import getBuilds from './get_builds'
 export default function* startBuild() {
   try {
     yield call(requestStartBuildAPI)
-    yield call(getBuilds)
   } catch (e) {
-    console.log("Error")
+    yield put(startBuildFailed(e.message))
   }
 }
