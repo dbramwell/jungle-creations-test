@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
+var travisAPI = require('../travis-api');
 
-/* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  travisAPI.getBuilds().pipe(res);
 });
 
 module.exports = router;
