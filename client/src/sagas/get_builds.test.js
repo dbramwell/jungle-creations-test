@@ -8,7 +8,7 @@ describe('getBuilds saga', () => {
   const gen = getBuilds();
 
   it('getBuilds should call fetchBuilds', () => {
-    expect(gen.next().value).toEqual(call(fetchColumns))
+    expect(gen.next().value).toEqual(call(fetchBuilds))
   })
 
   it('getBuilds should return json from fetch response', () => {

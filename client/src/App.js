@@ -3,6 +3,7 @@ import './App.css'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import fetchBuilds from './actions/fetch_builds'
+import startBuild from './actions/start_build'
 import DataTable from './components/data_table'
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
           <img src={'https://travis-ci.com/images/logos/TravisCI-Full-Color.png'} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to the build radiator for David Bramwell's Jungle Creations Assessment</h1>
           <button onClick={this.props.fetchBuilds}>Click here to refresh data</button>
+          <button onClick={this.props.startBuild}>Click here to start a build</button>
         </header>
         {this.showDataTable()}
       </div>
@@ -33,7 +35,8 @@ const mapStateToProps = state => {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
-    fetchBuilds
+    fetchBuilds,
+    startBuild
   }, dispatch)
 }
 

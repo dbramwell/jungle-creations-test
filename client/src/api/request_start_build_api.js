@@ -1,0 +1,1 @@
+export const requestStartBuildAPI = () => fetch('/start_build', {method: 'POST'})
