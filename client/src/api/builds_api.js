@@ -1,0 +1,1 @@
+export const fetchBuilds = () => fetch('/builds')
